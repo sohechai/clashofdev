@@ -1,0 +1,68 @@
+[
+	{
+		"theme": "DESIGN",
+		"bareme": "/6 pts",
+		"title": "L'ARTISTE DE RENOM",
+		"judges": "maislina_",
+		"description": "**Le design**, c’est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
+		"subDescription": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; Figma n’a aucun secret pour ce Dev de talent.",
+		"color": "purple",
+		"image": "design-image.png",
+		"icon": "design-icon.svg"
+	},
+	{
+		"theme": "CODE",
+		"bareme": "/6 pts",
+		"title": "LE BÂTISSEUR DE CODE",
+		"judges": "Chris",
+		"description": "Ses lignes de code sont des fondations solides. C’est un maître du front, capable de structurer les systèmes les plus complexes sans se casser la tête.",
+		"subDescription": "Maitre de VSCode, il a surement fini le challenge en s’assurant d’avoir le code le plus clair et le plus propre des 36 participants.",
+		"color": "pink",
+		"image": "code-image.png",
+		"icon": "code-icon.svg"
+	},
+	{
+		"theme": "MOTION",
+		"bareme": "/3 pts",
+		"title": "LE MAITRE DE LA FLUIDITÉ",
+		"judges": "Lina,Chris",
+		"description": "Aucun composant ne s’affiche sans une animation soignée. Ses transitions sont légères, dynamiques et fluides, captivant l'utilisateur à chaque interaction.",
+		"subDescription": "Ce dev a l’oeil et maitrise le motion mieux que n’importe qui.",
+		"color": "green",
+		"image": "motion-image.png",
+		"icon": "motion-icon.svg"
+	},
+	{
+		"theme": "RESPONSIVE",
+		"bareme": "/2 pts",
+		"title": "LE CHERCHEUR DE BREAKPOINT",
+		"judges": "Lina,Chris",
+		"description": "Quelle que soit la taille de l’écran, il garantit une expérience utilisateur sans faille. Chaque site s’adapte à tous les supports, du mobile au grand écran.",
+		"subDescription": "Il fait attention à chaque breakpoint attentivement, on ne pourra pas le reprendre à l’inspection!",
+		"color": "blue",
+		"image": "responsive-image.png",
+		"icon": "responsive-icon.svg"
+	},
+	{
+		"theme": "EASTER EGG",
+		"bareme": "/3 pts",
+		"title": "L'ARTISTE DE RENOM",
+		"judges": "Lina,Chris",
+		"description": "Derrière une ligne de code bien choisie se cache un secret bien gardé. Il glisse la surprise qui surprendra les utilisateurs les plus curieux.",
+		"subDescription": "Dev attentif aux comportements utilisateurs il saura cacher l’Easter Egg au meilleur endroit.",
+		"color": "mustard",
+		"image": "easter-egg-image.png",
+		"icon": "easter-egg-icon.svg"
+	},
+	{
+		"theme": "BIG BOSS",
+		"bareme": "/Infinite pts",
+		"title": "LE SUR-BOOSTED",
+		"judges": "Lina,Chris",
+		"description": "Il excelle dans tous les domaines, alliant design, propreté de code, réactivité, animations fluides et créativité cachée. Un vrai prodige qui a su briller dans chaque aspect du développement.",
+		"subDescription": "Ce dev aux multitalents a reçu la standing ovation du jury.",
+		"color": "orange",
+		"image": "big-boss-image.png",
+		"icon": "big-boss-icon.svg"
+	}
+]
