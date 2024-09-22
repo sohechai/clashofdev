@@ -45,6 +45,10 @@ a {
 	text-decoration: none;
 }
 
+html {
+	margin: 0;
+	padding: 0;
+}
 body {
 	margin: 20px var(--margin);
 	display: flex;
@@ -97,6 +101,14 @@ button {
 }
 
 /* responsive */
+/* tablet */
+/* @media (max-width: 1024px) {
+	:root {
+		--margin: 24px;
+	}
+} */
+
+/* mobile */
 @media (max-width: 768px) {
 	:root {
 		--margin: 12px;

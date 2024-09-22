@@ -92,8 +92,8 @@
 
 .hero-title {
 	font-weight: 500;
-	font-size: 9rem;
-	line-height: 9rem;
+	font-size: 8vw;
+	line-height: 8vw;
 	color: var(--black);
 	display: flex;
 	align-items: center;
@@ -166,8 +166,8 @@
 	grid-template-columns: repeat(16, 1fr);
 	grid-template-rows: auto auto;
 	grid-gap: 20px;
-	width: calc(100vw - 144px);
-	height: auto;
+	/* width: calc(100vw - 64px); */
+	/* height: 100vh; */
 	border-radius: 60px;
 	padding: 40px;
 	color: #262625;
@@ -240,7 +240,7 @@
 }
 
 .card-image {
-	grid-column: 1 / -5;
+	grid-column: 1 / 12;
 }
 
 .card-image img {
@@ -249,7 +249,7 @@
 }
 
 .card-description {
-	grid-column: 13 / -2;
+	grid-column: 12 / -2;
 	font-size: 12px;
 	font-weight: 500;
 }
@@ -287,6 +287,10 @@
 	font-weight: 500;
 	margin: 0;
 	text-align: justify;
+}
+
+.big-title>svg {
+	mix-blend-mode: difference;
 }
 
 .button-wrapper {
@@ -376,8 +380,13 @@
 /* tablet */
 @media (max-width: 1200px) {
 	.hero-title {
-		font-size: 12vw;
-		line-height: 12vw;
+		position: relative;
+		font-size: 10vw;
+		line-height: 10vw;
+	}
+
+	.hero-icon {
+		margin-right: 12px;
 	}
 
 	.hero-right {
@@ -422,12 +431,6 @@
 		width: 100%;
 	}
 
-	.hero-title>img {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
 	#card-footer {
 		height: auto;
 	}
@@ -453,13 +456,13 @@
 		line-height: 16vw;
 	}
 
+	.hero-icon {
+		margin-right: 12px;
+	}
+
 	.hero-right {
 		width: 100%;
 		margin-top: 40px;
-	}
-
-	.bottom-hero {
-		/* margin-top: 80px; */
 	}
 
 	.card-wrapper {

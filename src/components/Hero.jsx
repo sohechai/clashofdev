@@ -27,7 +27,7 @@ const Hero = () => {
 			<div className="top-hero">
 				<div className="hero-left">
 					<div className="hero-title">
-						Que le <br/>plus fort,
+						Que le plus fort,
 					</div>
 					<div className="hero-title">
 						<img src={iconHero} alt="Icon Hero" className="hero-icon" />

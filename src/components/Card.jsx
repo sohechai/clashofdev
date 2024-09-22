@@ -9,6 +9,8 @@ import CardJudge from './CardJudge.jsx';
 
 const Card = ({ theme, bareme, title, judges, description, subDescription, color, image, icon }) => {
 
+	console.log(description);
+
 	return (
 		<div className="card-wrapper" style={{ backgroundColor: `var(--${color}-light)` }}>
 			<div className="theme-wrapper">
@@ -24,13 +26,17 @@ const Card = ({ theme, bareme, title, judges, description, subDescription, color
 			</div>
 			<div className="card-description">
 				<p>
-					{description}
+					{description.map((part, index) =>
+						part.bold ? <strong key={index}>{part.text}</strong> : <span key={index}>{part.text}</span>
+					)}
 				</p>
 				<p>
-					{subDescription}
+					{subDescription.map((part, index) =>
+						part.bold ? <strong key={index}>{part.text}</strong> : <span key={index}>{part.text}</span>
+					)}
 				</p>
 			</div>
-			<div className="circle-card" style={{ backgroundColor: `var(--${color}-mid)`}}>
+			<div className="circle-card" style={{ backgroundColor: `var(--${color}-mid)` }}>
 				<img src={icons[icon]} alt="Cursor" key={icon} />
 			</div>
 		</div>

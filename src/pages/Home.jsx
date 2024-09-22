@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar.jsx';
 import Hero from '../components/Hero.jsx';
 import Card from '../components/Card.jsx';
-import cardData from '../assets/cards-data.json';
+import cardData from '../assets/cards-data.js';
 import CardFooter from '../components/CardFooter.jsx';
 import Footer from '../components/Footer.jsx';
 
