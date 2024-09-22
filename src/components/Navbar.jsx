@@ -8,8 +8,21 @@ const Navbar = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
 	const { scrollYProgress } = useScroll();
 	const scrollPercentage = useTransform(scrollYProgress, [0, 1], [0, 100]);
-
 	const roundedScrollPercentage = useTransform(scrollPercentage, value => Math.ceil(value));
+	const [marginValue, setMarginValue] = useState('32px'); 
+
+
+	useEffect(() => {
+		const updateMarginValue = () => {
+			const value = getComputedStyle(document.documentElement).getPropertyValue('--margin').trim();
+			setMarginValue(value);
+		};
+
+		updateMarginValue();
+		window.addEventListener('resize', updateMarginValue);
+
+		return () => window.removeEventListener('resize', updateMarginValue);
+	}, []);
 
 	const toggleTheme = () => {
 		setIsDarkMode(!isDarkMode);
@@ -29,26 +42,24 @@ const Navbar = () => {
 
 	return (
 		<nav className="navbar">
-				<motion.div
-					className="progress-bar"
-					style={{
-						scaleX: scrollYProgress,
-						transformOrigin: '0%',
-						height: '4px',
-						backgroundColor: isDarkMode ? '#F3F3F1' : '#262625',
-						width: '100%',
-						position: 'absolute',
-						top: '-20px',
-						left: '-32px',
-					}}
-				/>
+			<motion.div
+				className="progress-bar"
+				style={{
+					scaleX: scrollYProgress,
+					transformOrigin: '0%',
+					height: '4px',
+					backgroundColor: isDarkMode ? '#F3F3F1' : '#262625',
+					width: '100vw',
+					position: 'absolute',
+					top: '-20px',
+					left: `-${marginValue}`,
+				}}
+			/>
+
 			<div className="navbar-logo">LA PISCINE</div>
 
-			{/* add a progress bar that goes from left to right with scroll */}
 			<motion.div className="navbar-center">
-				<motion.span style={{ display: 'inline-block' }}>
-					{roundedScrollPercentage}
-				</motion.span>%
+				<motion.span style={{ display: 'inline-block' }}>{roundedScrollPercentage}</motion.span>%
 			</motion.div>
 
 			<div className="navbar-toggle">
@@ -62,7 +73,7 @@ const Navbar = () => {
 				/>
 				<div className="checkbox-container">
 					<label htmlFor="input-toggle" className="label-for-toggle">
-						<span className="ball arrow">
+						<span className="ball">
 							{
 								isDarkMode ?
 									<img src={toggleDark} alt="Toggle" /> :

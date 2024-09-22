@@ -16,7 +16,7 @@ const Card = ({ theme, bareme, title, judges, description, subDescription, color
 				<span>{bareme}</span>
 			</div>
 			<h3 className="card-title">{title}</h3>
-			<div className="judge-wrapper">
+			<div className="card-judge-wrapper">
 				<CardJudge judges={judges} color={color} />
 			</div>
 			<div className="card-image">

@@ -10,12 +10,12 @@ import { motion } from "framer-motion";
 const Hero = () => {
 	const marqueeVariants = {
 		animate: {
-			x: [0, -3100],
+			x: [0, -6200],
 			transition: {
 				x: {
 					repeat: Infinity,
 					repeatType: "loop",
-					duration: 5,
+					duration: 10,
 					ease: "linear",
 				},
 			},
@@ -27,7 +27,7 @@ const Hero = () => {
 			<div className="top-hero">
 				<div className="hero-left">
 					<div className="hero-title">
-						Que le plus fort,
+						Que le <br/>plus fort,
 					</div>
 					<div className="hero-title">
 						<img src={iconHero} alt="Icon Hero" className="hero-icon" />
@@ -44,20 +44,12 @@ const Hero = () => {
 					variants={marqueeVariants}
 					animate="animate"
 				>
-					{/* <div className="text-content"> */}
-						{/* <h1>
-							Let's Work Together. Let's Work Together. Let's Work Together. Let's
-							Work Together. Let's Work Together. Let's Work Together. Let's Work
-							Together
-						</h1> */}
-						<h1>
+					<h1>
 						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
 						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-						</h1>
-						{/* &lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" /> */}
-					{/* </div> */}
-
+						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
+						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
+					</h1>
 				</motion.div>
 			</div>
 		</section>

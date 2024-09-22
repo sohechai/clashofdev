@@ -20,6 +20,7 @@
 	--purple-light: #EBEDFF;
 	--purple-mid: #9FA8FE;
 	--white: #FEFEFE;
+	--margin: 32px;
 
 	/* toggle var */
 	--container: 54px;
@@ -45,11 +46,11 @@ a {
 }
 
 body {
-	margin: 20px 32px;
+	margin: 20px var(--margin);
 	display: flex;
-	/* height: 500vh; */
+	justify-content: center;
 	overflow-x: hidden;
-	/* place-items: center; */
+	place-items: center;
 }
 
 h1 {
@@ -58,7 +59,12 @@ h1 {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin: 0;
 }
 
@@ -88,4 +94,11 @@ button {
 	/* button {
 		background-color: #f9f9f9;
 	} */
+}
+
+/* responsive */
+@media (max-width: 768px) {
+	:root {
+		--margin: 12px;
+	}
 }
