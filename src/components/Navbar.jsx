@@ -9,7 +9,7 @@ const Navbar = () => {
 	const { scrollYProgress } = useScroll();
 	const scrollPercentage = useTransform(scrollYProgress, [0, 1], [0, 100]);
 	const roundedScrollPercentage = useTransform(scrollPercentage, value => Math.ceil(value));
-	const [marginValue, setMarginValue] = useState('32px'); 
+	const [marginValue, setMarginValue] = useState('32px');
 
 
 	useEffect(() => {

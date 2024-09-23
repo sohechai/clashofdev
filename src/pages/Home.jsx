@@ -12,20 +12,20 @@ const Home = () => {
 			<Navbar />
 			<Hero />
 			<section className='cards-wrapper'>
-			{cardData.map((card, index) => (
-				<Card
-					key={index}
-					theme={card.theme}
-					bareme={card.bareme}
-					title={card.title}
-					judges={card.judges}
-					description={card.description}
-					subDescription={card.subDescription}
-					color={card.color}
-					image={card.image}
-					icon={card.icon}
-				/>
-			))}
+				{cardData.map((card, index) => (
+					<Card
+						key={index}
+						theme={card.theme}
+						bareme={card.bareme}
+						title={card.title}
+						judges={card.judges}
+						description={card.description}
+						subDescription={card.subDescription}
+						color={card.color}
+						image={card.image}
+						icon={card.icon}
+					/>
+				))}
 			</section>
 			<CardFooter />
 			<Footer />

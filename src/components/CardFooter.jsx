@@ -10,9 +10,6 @@ const CardFooter = () => {
 
 	const handleEnterNextLevel = () => {
 		setIsVideoVisible(true);
-		console.log(document.getElementById('videoGlitch'));
-		// const video = videoRef.current;
-		// video.play();
 	};
 
 	const handleVideoEnded = () => {
@@ -65,7 +62,6 @@ const CardFooter = () => {
 						Enter Next Level
 					</motion.button>
 				</div>
-
 
 			</div >
 			{isVideoVisible && (

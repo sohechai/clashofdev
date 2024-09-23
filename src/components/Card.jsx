@@ -1,11 +1,8 @@
 import React from 'react';
 import '../styles/App.css';
-import designImage from '../assets/design-image.png';
 import images from '../utils/imageLoader.jsx';
 import icons from '../utils/iconLoader.jsx';
-import cursor from '../assets/cursor.svg';
 import CardJudge from './CardJudge.jsx';
-
 
 const Card = ({ theme, bareme, title, judges, description, subDescription, color, image, icon }) => {
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import '../styles/App.css';
 import cardHero from '../assets/card-hero.svg';
 import iconHero from '../assets/icon-hero.svg';

@@ -6,9 +6,7 @@ const Footer = () => {
 		<nav className="navbar">
 			<div className="navbar-logo">LA PISCINE</div>
 			<div className="navbar-center">100%</div>
-			<div className="navbar-toggle">
-				@2024
-			</div>
+			<div className="navbar-toggle">@2024</div>
 		</nav>
 	);
 };

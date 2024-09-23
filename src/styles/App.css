@@ -9,7 +9,7 @@
 }
 
 .navbar-logo {
-	position:relative;
+	position: relative;
 	isolation: isolate;
 	background-color: var(--black);
 	color: var(--white);
@@ -166,13 +166,10 @@
 	grid-template-columns: repeat(16, 1fr);
 	grid-template-rows: auto auto;
 	grid-gap: 20px;
-	/* width: calc(100vw - 64px); */
-	/* height: 100vh; */
 	border-radius: 60px;
 	padding: 40px;
 	color: #262625;
 	overflow: hidden;
-	/* z-index: 0; */
 }
 
 .card-header {
@@ -365,7 +362,7 @@
 	object-fit: cover;
 }
 
-.video-wrapper > video {
+.video-wrapper>video {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -488,7 +485,6 @@
 	.card-image {
 		grid-column: 2 / -2;
 		grid-row: 2;
-		/* position: relative; */
 	}
 
 	.card-description {
