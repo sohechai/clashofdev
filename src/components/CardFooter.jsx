@@ -17,7 +17,6 @@ const CardFooter = () => {
 	};
 
 	useEffect(() => {
-		console.log(document.getElementById('videoGlitch'));
 		const video = document.getElementById('videoGlitch');
 		if (video)
 			video.volume = 0.1;

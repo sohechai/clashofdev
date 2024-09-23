@@ -5,9 +5,6 @@ import icons from '../utils/iconLoader.jsx';
 import CardJudge from './CardJudge.jsx';
 
 const Card = ({ theme, bareme, title, judges, description, subDescription, color, image, icon }) => {
-
-	console.log(description);
-
 	return (
 		<div className="card-wrapper" style={{ backgroundColor: `var(--${color}-light)` }}>
 			<div className="theme-wrapper">
