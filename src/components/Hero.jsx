@@ -8,49 +8,29 @@ import { motion } from "framer-motion";
 
 
 const Hero = () => {
-	const marqueeVariants = {
-		animate: {
-			x: [0, -6200],
-			transition: {
-				x: {
-					repeat: Infinity,
-					repeatType: "loop",
-					duration: 10,
-					ease: "linear",
-				},
-			},
-		},
-	};
 
 	return (
 		<section className="hero">
 			<div className="top-hero">
 				<div className="hero-left">
 					<div className="hero-title">
-						Que le plus fort,
-					</div>
-					<div className="hero-title">
-						<img src={iconHero} alt="Icon Hero" className="hero-icon" />
-						<span style={{ fontStyle: "italic" }} >l'emporte </span>
+						<p>Que le plus fort, <span style={{ fontStyle: "italic" }} > l'emporte! <img src={iconHero} alt="Icon Hero" className="hero-icon" /></span></p>
+						
+						
 					</div>
 				</div>
 				<div className="hero-right">
 					<img src={cardHero} alt="Card Hero" className="card" />
 				</div>
 			</div>
-			<div className="bottom-hero">
-				<motion.div
-					className="track"
-					variants={marqueeVariants}
-					animate="animate"
-				>
-					<h1>
-						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-						&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
-					</h1>
-				</motion.div>
+			<div className="marquee">
+				<div className="track-wrapper">
+					<div className="track">
+						<div className="content">
+							&nbsp;&lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" /> &lt;A&gt;Front les Tous! <img src={marqueeIcon} alt="Logo" /> Clash of Dev <img src={marqueeIcon2} alt="Logo" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

@@ -77,7 +77,7 @@
 
 /* hero */
 .hero {
-	position: relative;
+	/* position: relative; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -87,44 +87,33 @@
 
 .top-hero {
 	display: flex;
-	justify-content: space-between;
+	/* flex-direction: column; */
 }
 
 .hero-title {
+	display: flex;
 	font-weight: 500;
 	font-size: 8vw;
 	line-height: 8vw;
 	color: var(--black);
-	display: flex;
-	align-items: center;
+	width: 60vw;
 }
 
 .hero-icon {
-	margin-right: 45px;
+	width: 100px;
+	/* margin-right: 45px; */
 }
 
+.hero-left {}
+
 .hero-right {
+	/* grid-column: -3 / -1; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-self: center;
 	width: 30vw;
 	max-width: 600px;
-	animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-
-	50% {
-		transform: translatey(-20px);
-	}
-
-	100% {
-		transform: translatey(0px);
-	}
 }
 
 .card {
@@ -134,28 +123,49 @@
 
 .bottom-hero {
 	display: flex;
-	align-self: baseline;
 	height: auto;
 	position: absolute;
 	bottom: 0;
+	font-weight: 700;
+	font-size: 12rem;
 }
 
 .marquee {
+	display: flex;
 	position: relative;
-	width: 100vw;
+	z-index: 10;
+	width: calc(100vw - 64px);
 	max-width: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
+	font-weight: 700;
+	font-size: 12rem;
+	height: auto;
+}
+
+.track-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	/* Le conteneur parent pour ajuster la hauteur */
+	width: 100%;
+	height: fit-content;
 }
 
 .track {
-	position: absolute;
+	position: relative;
 	white-space: nowrap;
-	bottom: 0;
+	will-change: transform;
+	animation: marquee 12s linear infinite;
 }
 
-.track>h1 {
-	font-weight: 700;
-	font-size: 12rem;
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 /* cards */
@@ -376,20 +386,6 @@
 /* responsive */
 /* tablet */
 @media (max-width: 1200px) {
-	.hero-title {
-		position: relative;
-		font-size: 10vw;
-		line-height: 10vw;
-	}
-
-	.hero-icon {
-		margin-right: 12px;
-	}
-
-	.hero-right {
-		width: 40vw;
-	}
-
 	.card-wrapper {
 		grid-template-columns: repeat(12, 1fr);
 	}
@@ -431,7 +427,7 @@
 	#card-footer {
 		height: auto;
 	}
-}
+} 
 
 /* mobile */
 @media (max-width: 800px) {
@@ -444,22 +440,41 @@
 	}
 
 	.top-hero {
-		width: auto;
+		display: flex;
 		flex-direction: column;
 	}
 
 	.hero-title {
-		font-size: 16vw;
-		line-height: 16vw;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.hero-title>p {
+		font-weight: 500;
+		font-size: 12vw;
+		line-height: 13vw;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.hero-icon {
-		margin-right: 12px;
+		width: 70px;
 	}
 
 	.hero-right {
 		width: 100%;
 		margin-top: 40px;
+	}
+
+	.marquee {
+		font-size: 8rem;
+		width: calc(100vw - 24px);
+	}
+
+	.track {
+		animation: marquee 12s linear infinite;
 	}
 
 	.card-wrapper {
@@ -479,7 +494,7 @@
 	}
 
 	.card-title {
-		grid-column: 4/-1;
+		grid-column: 5/-2;
 	}
 
 	.card-image {
@@ -542,16 +557,10 @@
 		right: 60px;
 	}
 
-	.hero-left {
+	/* .hero-left {
 		position: relative;
 		width: 100%;
-	}
-
-	.hero-title>img {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
+	} */
 
 	#card-footer {
 		height: auto;

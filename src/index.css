@@ -54,7 +54,7 @@ body {
 	margin: 20px var(--margin);
 	display: flex;
 	justify-content: center;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	place-items: center;
 }
 
@@ -84,17 +84,6 @@ button {
 	font: inherit;
 	color: inherit;
 	cursor: pointer;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-
-	a:hover {
-		color: #747bff;
-	}
 }
 
 /* mobile */
